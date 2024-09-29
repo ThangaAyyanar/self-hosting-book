@@ -102,6 +102,8 @@ Draft
 ## Pihole
 ## Adguard
 ## blocky
+## Gravity
+https://github.com/BeryJu/gravity
 
 # Chapter 15: RSS Reader
 ## Tiny tiny rss
@@ -130,6 +132,7 @@ Draft
 # Chapter x: Reverse proxy
 ## Ngnix reverse proxy
 ## Caddy
+## Haproxy
 
 # Chapter y: Exposing to the internet
 ## DDNS
