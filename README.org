@@ -4,6 +4,7 @@
 - Media server or sharing the media
 - Jellyfin
 - Samba
+- [[https://parottasalna.com/2024/09/02/the-search-for-the-perfect-media-server-a-journey-of-discovery/][Minidlna - audio:Tamil]]
 ** Rclone - dlna
 - rclone can serve file/share(cloud files) these over SFTP, HTTP, WebDAV, FTP and DLNA.
   #+begin_src shell
