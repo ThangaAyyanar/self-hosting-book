@@ -14,6 +14,25 @@
 - VLC can automatically detect the dlna server (wait for few mins)
 - VLC: can be installed in Mobile,TV
 
+* Chapter 5: Syncing folders between devices
+** TODO Rsync
+#+begin_src shell
+  rsync -avz --delete /path/to/local/folder/ user@remote_host:/path/to/remote/folder/
+#+end_src
+
+- ~-a~: Archive mode; it preserves permissions, timestamps, symbolic links, etc.
+- ~-v~: Verbose; it provides detailed output of the transfer process.
+- ~-z~: Compresses file data during the transfer for faster transmission.
+
+** Syncthing
+- To expose in local network
+- `$HOME/.local/state/syncthing` then find port 8384
+- Change 127.0.0.1:8384 to :8384 (colon is important) [I need to check once]
+- ref:
+  - https://forum.syncthing.net/t/solved-changing-listening-port/69/5
+  - https://docs.syncthing.net/users/config.html
+
+
 * Chapter 13: Notification service
 - [[file:english/ntfysh.md][Ntfy - Notification server]]
 
