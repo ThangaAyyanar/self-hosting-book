@@ -1,0 +1,82 @@
+Looking for a software to manage my ebooks. almost everyone recommends to calibre
+
+*** Installing
+Binary installation
+#+begin_src shell
+  sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+#+end_src
+
+once installed i am able to open the calibre
+
+*** Library path
+you can change the location where the books are stored by clicking the
+*Calibre library* in tool bar. The default location will be
+#+begin_example
+~/Calibre Library
+#+end_example
+
+*** Appearance changes
+Default appearance of the calibre looks pretty old let's change
+it. select preference and click look & feel
+- Dark mode
+- Set the font to Jet brains Mono nerd font (My preference)
+- Change the icon pack to Monstre
+  
+You can select different layout option using *layout* button in the status bar
+
+*** Adding book
+You can start adding books
+- By drag and dropping the books
+- Add books button
+- Using calibredb command
+
+
+When you are trying to access calibre functions from the terminal
+ensure the GUI application is not opened or it will raise some errors
+
+*** Calibredb
+One of the coolest way to add books is to use *calibredb* command line tool. Check whether calibredb is accesible from terminal using the following command
+#+begin_src shell
+  calibredb list
+#+end_src
+This will list all the books available in calibre. To add new books to the library
+#+begin_src shell
+  calibredb add [options] file1 file2
+#+end_src
+you can more operation using calibredb like editing meta data, remove ebook.
+
+*** Calibre web server
+- Start the web server using following command
+  #+begin_src shell
+    calibre-server
+  #+end_src
+- Web server with custom port
+  #+begin_src shell
+    calibre-server --port=9876
+  #+end_src
+
+*** OPDS
+- OPDS is a protocol to access your ebook library in other devices
+- URL for your OPDS is *HOSTNAME:PORT/opds* eg: 192.268.1.10:8080/opds
+- Software that i use to consume content from OPDS
+  - Foliate (linux ebook reader)
+    - https://johnfactotum.github.io/foliate/
+  - Librera Reader (Android)
+    - https://github.com/foobnix/LibreraReader
+    - Download the Pro version from github repo.
+    - Network tab in the app
+    - If network tab is not there then reset(not reinstall) the app
+*** Convert ebooks from terminal
+- you can convert books from GUI. i prefer terminal tools
+  #+begin_src shell
+    ebook-convert input_file output_file [options]
+  #+end_src
+
+*** Backuping up
+To backup the library all we need is to copy the content of *Calibre
+Library* like a monthly once or twice. Depends on your needs
+
+*** Others
+- https://github.com/janeczku/calibre-web
+  - If you are not satisfied with web server that comes with calibre you can look into this.
+- If you are okay with self hosting you can try *Kavita* - https://www.kavitareader.com/
