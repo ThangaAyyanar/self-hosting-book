@@ -1,8 +1,0 @@
-#+title: Self hosting
-
-* Chapter 13: Notification service
-- [[file:ntfysh.md][Ntfy - Notification server]]
-
-* Chapter 16: Library
-- [[file:calibre.org][Calibre - Library management]]
-

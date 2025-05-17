@@ -1,0 +1,21 @@
+#+title: Self hosting
+
+* Chapter 3: Media server
+- Media server or sharing the media
+- Jellyfin
+- Samba
+** Rclone - dlna
+- rclone can serve file/share(cloud files) these over SFTP, HTTP, WebDAV, FTP and DLNA.
+  #+begin_src shell
+    ./rclone serve dlna /home/goldayan/Songs
+  #+end_src
+- Now we can use VLC -> network tab to stream the audio/video
+- VLC can automatically detect the dlna server (wait for few mins)
+- VLC: can be installed in Mobile,TV
+
+* Chapter 13: Notification service
+- [[file:ntfysh.md][Ntfy - Notification server]]
+
+* Chapter 16: Library
+- [[file:calibre.org][Calibre - Library management]]
+
