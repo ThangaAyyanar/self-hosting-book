@@ -1,4 +1,4 @@
-# self-hosting-tamil-book
+# self-hosting-book
 Book about self hosting in tamil language
 
 ----
