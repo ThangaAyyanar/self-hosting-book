@@ -91,6 +91,8 @@ Draft
 ## Uptime kuma
 ## Netdata
 ## staus-ng
+## Glances - system monitor (python) 
+- https://nicolargo.github.io/glances/
 
 # Chapter 13: Notification service
 ## Ntfy
