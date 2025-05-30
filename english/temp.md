@@ -104,6 +104,7 @@ Draft
 ## Pihole
 ## Adguard
 ## blocky
+- 
 ## Gravity
 https://github.com/BeryJu/gravity
 
@@ -189,3 +190,7 @@ https://github.com/BeryJu/gravity
 
 # Drafts
 ## Creating bridge for hypervisor / Virtual machine
+
+# TLP
+- https://linrunner.de/tlp/index.html
+- TLP - Optimize Linux Laptop Battery Life
