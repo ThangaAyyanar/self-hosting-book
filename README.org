@@ -36,6 +36,35 @@
 * Chapter 13: Notification service
 - [[file:english/ntfysh.md][Ntfy - Notification server]]
 
+* Chapter 14: DNS and Ad-Blocking
+- ref: https://comfy.guide/server/blocky/
+- Check if 53 port is already used by other service (most typically systemd-resolved in ubuntu)
+  #+begin_src shell
+    sudo lsof -i :53
+  #+end_src
+- Check the status  
+  #+begin_src shell
+    sudo systemctl status systemd-resolved
+  #+end_src
+- disable (permanent)
+  #+begin_src shell
+    sudo systemctl disable systemd-resolved
+  #+end_src
+- stop  (temporary), turn on after reboot
+  #+begin_src shell
+    sudo systemctl stop systemd-resolved
+  #+end_src
+
 * Chapter 16: Library
 - [[file:english/calibre.org][Calibre - Library management]]
 
+* Appendix A
+
+** Override laptop close lid in ubuntu
+- https://fostips.com/lid-close-action-ubuntu-21-04-laptop/
+
+** Wake on lan
+- Install wakeonlan app
+#+begin_src shell
+  wakeonlan MAC_ADDRESS
+#+end_src
