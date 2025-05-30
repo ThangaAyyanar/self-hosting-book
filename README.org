@@ -32,6 +32,20 @@
   - https://forum.syncthing.net/t/solved-changing-listening-port/69/5
   - https://docs.syncthing.net/users/config.html
 
+* Chapter 12: Monitoring services
+
+** Service/App health monitor - status-ng
+
+** System monitor - glances
+- It is a python program so we will use pipx to install it.
+  #+begin_src shell
+    pipx install 'glances[all]'
+  #+end_src
+- To start the web server
+  #+begin_src shell
+    glances -w
+  #+end_src
+- This will start the web server in 61208 (atleast for me)  
 
 * Chapter 13: Notification service
 - [[file:english/ntfysh.md][Ntfy - Notification server]]
