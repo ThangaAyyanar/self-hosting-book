@@ -1,11 +1,12 @@
 #+title: Self hosting
 
-* Chapter 3: Media server
+* Chapter 2: Media server
 - Media server or sharing the media
 - Jellyfin
 - Samba
 - [[https://parottasalna.com/2024/09/02/the-search-for-the-perfect-media-server-a-journey-of-discovery/][Minidlna]]
 ** Rclone - dlna
+- Download rclone from https://rclone.org/
 - rclone can serve file/share(cloud files) these over SFTP, HTTP, WebDAV, FTP and DLNA.
   #+begin_src shell
     ./rclone serve dlna /home/goldayan/Songs
@@ -14,8 +15,18 @@
 - VLC can automatically detect the dlna server (wait for few mins)
 - VLC: can be installed in Mobile,TV
 
+* Chapter 3: Sharing folders
+** Webdav
+- Download rclone from https://rclone.org/
+- rclone can serve file/share(cloud files) these over SFTP, HTTP, WebDAV, FTP and DLNA.
+  #+begin_src shell
+    ./rclone serve dlna /home/goldayan/Songs
+  #+end_src
+** Samba
+** NFS
+
 * Chapter 5: Syncing folders between devices
-** TODO Rsync
+** Rsync
 #+begin_src shell
   rsync -avz --delete /path/to/local/folder/ user@remote_host:/path/to/remote/folder/
 #+end_src
@@ -23,6 +34,7 @@
 - ~-a~: Archive mode; it preserves permissions, timestamps, symbolic links, etc.
 - ~-v~: Verbose; it provides detailed output of the transfer process.
 - ~-z~: Compresses file data during the transfer for faster transmission.
+- Note: Ensure the remote folder is already created.
 
 ** Syncthing
 - To expose in local network
@@ -68,6 +80,25 @@
   #+begin_src shell
     sudo systemctl stop systemd-resolved
   #+end_src
+
+* Chapter 15: Rich Site Summary
+** Yarr (Yet Another RSS Reader)
+- Download the appropriate binary file from the following repo
+  - https://github.com/nkanaev/yarr
+- Start the server using
+  #+begin_src shell
+    ./yarr -addr ":7070"
+  #+end_src
+- By default yarr only listens on localhost, above command will make
+  it to listen on all network devices.
+
+** Read you - Android app
+- Install the app from F-droid
+- We can use **Fever** api to sync RSS from yarr to mobile
+- Sample fever url will be
+  - https://<DOMAINNAME:7070>/fever/
+  - last / is important, otherwise it didn't work
+- For username and password try admin
 
 * Chapter 16: Library
 - [[file:english/calibre.org][Calibre - Library management]]
