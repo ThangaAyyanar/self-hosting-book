@@ -26,9 +26,22 @@
   #+begin_src shell
     ./rclone serve webdav /home/goldayan/Songs
   #+end_src
+- With username and password with custom port address
+  #+begin_src shell
+    ./rclone serve webdav --addr ":8991" /home/hello/Documents --user admin --pass qwerty
+  #+end_src
 *** Caddy
 - One of the awesome find is using caddy as webdav server
 - https://marko.euptera.com/posts/caddy-webdav.html
+*** Android app - Material Files
+- https://github.com/zhanghai/MaterialFiles
+- You can add the server and port number with http as protocol.
+*** Android - Davx5 & Material Files
+- Use webdav mounts in Davx5 and add the server
+- Use appropriate http or https for host
+- Once it is mounted then we can add the storage in Material Files
+- You can only share files from Davx5 inorder to write we need Material Files app
+- Material Files -> External storage and Click Davx5
 ** NFS
 ** Samba
 - Access shares in Windows this option is good.
